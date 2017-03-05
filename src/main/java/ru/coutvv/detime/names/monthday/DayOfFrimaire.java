@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Осень
  * @author coutvv
  */
-public enum DayOfFrimaire {
+public enum DayOfFrimaire implements RepublicanDay  {
     RAIPONCE,
     TURNEPS,
     CHICOREE,
@@ -36,4 +36,8 @@ public enum DayOfFrimaire {
     TRUFFE,
     OLIVE,
     PELLE;
+
+    public String getName() {
+        return this.name();
+    }
 }

@@ -4,7 +4,7 @@ package ru.coutvv.detime.names.monthday;
  * Дни 02 месяца
  * Осень
  */
-public enum DayOfBrumaire {
+public enum DayOfBrumaire implements RepublicanDay {
     POMME,
     CELERI,
     POIRE,
@@ -35,4 +35,8 @@ public enum DayOfBrumaire {
     COING,
     CORMIER,
     ROULEAU;
+
+    public String getName() {
+        return this.name();
+    }
 }

@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Лето
  * @author coutvv
  */
-public enum DayOfFructidor {
+public enum DayOfFructidor implements RepublicanDay  {
     PRUNE,
     MILLET,
     LYCOPERDON,
@@ -36,4 +36,8 @@ public enum DayOfFructidor {
     MAIS,
     MARRON,
     PANIER;
+
+    public String getName() {
+        return this.name();
+    }
 }

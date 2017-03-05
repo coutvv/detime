@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Зима
  * @author coutvv
  */
-public enum DayOfNivose {
+public enum DayOfNivose implements RepublicanDay  {
     TOURBE,
     HOUILLE,
     BITUME,
@@ -36,4 +36,7 @@ public enum DayOfNivose {
     ZINC,
     MERCURE,
     CRIBLE;
+    public String getName() {
+        return this.name();
+    }
 }

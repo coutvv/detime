@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Весна
  * @author coutvv
  */
-public enum DayOfGerminal {
+public enum DayOfGerminal implements RepublicanDay  {
     Primevere,
     Platane,
     Asperge,
@@ -36,4 +36,7 @@ public enum DayOfGerminal {
     Pensee,
     Myrtille,
     Greffoir;
+    public String getName() {
+        return this.name();
+    }
 }

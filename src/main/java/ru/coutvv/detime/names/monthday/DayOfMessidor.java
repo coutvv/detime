@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Лето
  * @author coutvv
  */
-public enum DayOfMessidor {
+public enum DayOfMessidor  implements RepublicanDay {
     SEIGLE,
     AVOINE,
     OIGNON,
@@ -35,5 +35,8 @@ public enum DayOfMessidor {
     AIL,
     VESCE,
     BLE,
-    CHALEMIE
+    CHALEMIE;
+    public String getName() {
+        return this.name();
+    }
 }

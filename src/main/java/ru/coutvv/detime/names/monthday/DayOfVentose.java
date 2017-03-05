@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Зима
  * @author coutvv
  */
-public enum DayOfVentose {
+public enum DayOfVentose implements RepublicanDay  {
     TUSSILAGE,
     CORNOUILLER,
     VIOLIER,
@@ -35,5 +35,9 @@ public enum DayOfVentose {
     SYLVIE,
     CAPILLAIRE,
     FRENE,
-    PLANTOIR
+    PLANTOIR;
+
+    public String getName() {
+        return this.name();
+    }
 }

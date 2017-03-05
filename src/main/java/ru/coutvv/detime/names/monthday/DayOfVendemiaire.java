@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Осень
  * @author coutvv
  */
-public enum DayOfVendemiaire {
+public enum DayOfVendemiaire implements RepublicanDay  {
     RAISIN,
     SAFRAN,
     CHATAIGNE,
@@ -36,6 +36,10 @@ public enum DayOfVendemiaire {
     TOMATE,
     ORGE,
     TONNEAU;
+
+    public String getName() {
+        return this.name();
+    }
 
     public static void main(String[] args) {
         DayOfVendemiaire day = DayOfVendemiaire.values()[13];

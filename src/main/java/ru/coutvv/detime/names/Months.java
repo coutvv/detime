@@ -9,7 +9,7 @@ public enum Months {
     //autumn
     VANDEMIAIRE,
     BRUMAIRE,
-    FIRMAIRE,
+    FRIRMAIRE,
     //winter
     NAVOSE,
     PLUVIOSE,
@@ -21,10 +21,11 @@ public enum Months {
     //Summer:
     MESSIDOR,
     THRMIDOR,
-    FRUCTIDOR;
+    FRUCTIDOR,
+    //end of year
+    OLYMPIC_WEEK;
 
     /**
-     *
      *
      * @author coutvv
      */

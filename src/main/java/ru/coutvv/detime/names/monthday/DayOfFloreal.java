@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Весна
  * @author coutvv
  */
-public enum DayOfFloreal {
+public enum DayOfFloreal  implements RepublicanDay {
     ROSE,
     CHENE,
     FOUGERE,
@@ -35,5 +35,9 @@ public enum DayOfFloreal {
     CIVETTE,
     BUGLOSSE,
     SENEVE,
-    HOULETTE
+    HOULETTE;
+
+    public String getName() {
+        return this.name();
+    }
 }

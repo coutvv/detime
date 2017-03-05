@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Лето
  * @author coutvv
  */
-public enum DayOfThermidor {
+public enum DayOfThermidor implements RepublicanDay  {
     EPEAUTRE,
     BOUILLON_BLANC,
     MELON,
@@ -35,5 +35,9 @@ public enum DayOfThermidor {
     COLZA,
     LUPIN,
     COTON,
-    MOULIN
+    MOULIN;
+
+    public String getName() {
+        return this.name();
+    }
 }

@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Весна
  * @author coutvv
  */
-public enum DayOfPrairial {
+public enum DayOfPrairial implements RepublicanDay  {
     LUZERNE,
     HEMEROCALLE,
     TREFLE,
@@ -35,5 +35,9 @@ public enum DayOfPrairial {
     VERVEINE,
     THYM,
     PIVOINE,
-    CHARIOT
+    CHARIOT;
+
+    public String getName() {
+        return this.name();
+    }
 }

@@ -5,7 +5,7 @@ package ru.coutvv.detime.names.monthday;
  * Зима
  * @author coutvv
  */
-public enum DayOfPluviose {
+public enum DayOfPluviose implements RepublicanDay  {
     LAUREOLE,
     MOUSSE,
     FRAGON,
@@ -36,4 +36,8 @@ public enum DayOfPluviose {
     CYCLAMEN,
     CHELIDOINE,
     TRAÎNEAU;
+
+    public String getName() {
+        return this.name();
+    }
 }
