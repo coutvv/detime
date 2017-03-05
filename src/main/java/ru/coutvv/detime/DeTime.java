@@ -46,4 +46,9 @@ public class DeTime {
 	}
 
 
+	public String toString() {
+		String minute = getMinute() < 10 ? "0" + getMinute() : "" + getMinute();
+		String seconds = getSeconds() < 10 ? "0" + getSeconds() : "" + getSeconds();
+		return "0" + getHour() + ":" + minute + ":" + seconds;
+	}
 }

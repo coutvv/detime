@@ -107,4 +107,11 @@ public class DeDate {
             return LocalDate.of(gregorianDate.getYear()-1, Month.SEPTEMBER, 22);
         }
     }
+
+    @Override
+    public String toString() {
+        String day = this.day < 10 ? "0" + this.day : this.day +"";
+
+        return day + " " + getMonthName() + " " + year;
+    }
 }
