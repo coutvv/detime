@@ -1,5 +1,6 @@
 package ru.coutvv.detime;
 
+import ru.coutvv.detime.names.Months;
 import ru.coutvv.detime.names.monthday.MonthDays;
 import ru.coutvv.detime.names.monthday.RepublicanDay;
 
@@ -44,7 +45,8 @@ public class DeDate {
     }
 
     public String getMonthName() {
-        return Month.values()[month].name();
+        int monthIndex = month-1;
+        return Months.values()[monthIndex].name();
     }
 
     public String getDayName() {
