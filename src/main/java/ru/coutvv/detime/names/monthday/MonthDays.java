@@ -52,7 +52,7 @@ public interface MonthDays {
     }
 
     static RepublicanDay getDayByMonth(int month, int day) {
-        if(month > 12) throw new IllegalArgumentException("Неверный номер месяца");
+        if(month > 13) throw new IllegalArgumentException("Неверный номер месяца");
         int monthIndex = month - 1;
         return getDayByMonth(Months.values()[monthIndex], day);
     }

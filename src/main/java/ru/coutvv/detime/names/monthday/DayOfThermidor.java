@@ -14,7 +14,7 @@ public enum DayOfThermidor implements RepublicanDay  {
     PRELE,
     ARMOISE,
     CARTHAME,
-    MÛRE,
+    MURE,
     ARROSOIR,
     PANIC,
     SALICORNE,
