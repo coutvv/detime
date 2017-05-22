@@ -45,6 +45,12 @@ public class DeTime {
 		return new DeTime(hour, minute, (byte) seconds);
 	}
 
+	public LocalTime getGregorian() {
+		double time = (hour * 10000 + minute * 100 + seconds) * 0.864;
+		long seconds = (Math.round(time) == 86400) ? 0 : Math.round(time);
+		return LocalTime.ofSecondOfDay(seconds);
+	}
+
 
 	public String toString() {
 		String minute = getMinute() < 10 ? "0" + getMinute() : "" + getMinute();
