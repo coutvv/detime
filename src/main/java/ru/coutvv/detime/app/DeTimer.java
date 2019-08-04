@@ -1,9 +1,11 @@
-package ru.coutvv.detime.util;
+package ru.coutvv.detime.app;
 
 import ru.coutvv.detime.DeTime;
 import ru.coutvv.detime.temporal.DecimalChronoUnit;
 
 import java.time.LocalTime;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
@@ -12,7 +14,7 @@ import java.util.function.Consumer;
  *
  * @author coutvv
  */
-public class DeTimer implements Runnable{
+public class DeTimer implements Runnable {
 
     private long gregMillis;
 
@@ -48,7 +50,7 @@ public class DeTimer implements Runnable{
             try {
                 TimeUnit.MILLISECONDS.sleep(DecimalChronoUnit.SECOND.getDuration().toMillis());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
             gregMillis -= DecimalChronoUnit.SECOND.getDuration().toMillis();
             if(isRun)
@@ -67,4 +69,14 @@ public class DeTimer implements Runnable{
         return DeTime.convert(LocalTime.ofNanoOfDay(gregMillis * 1_000_000));
     }
 
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("wtf?");
+        DeTimer dt = new DeTimer(1, 0, 0, (s) -> System.out.print("second!"));
+        Executor e = Executors.newSingleThreadExecutor();
+        e.execute(dt);
+        System.out.println("fuk off");
+        Thread.sleep(1_000);
+
+        dt.stop();
+    }
 }

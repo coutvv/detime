@@ -10,6 +10,7 @@ import java.time.temporal.ChronoUnit;
 /**
  * Created by coutvv on 04.03.2017.
  */
+@Deprecated
 public class DeDate {
 
     /**
@@ -109,7 +110,7 @@ public class DeDate {
 
     @Override
     public String toString() {
-        String day = this.day < 10 ? "0" + this.day : this.day +"";
+        String day = this.day < 10 ? "0" + this.day : this.day + "";
 
         return day + " " + getMonthName() + " " + year;
     }

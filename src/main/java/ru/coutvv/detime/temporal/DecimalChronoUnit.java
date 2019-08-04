@@ -63,7 +63,7 @@ public enum DecimalChronoUnit implements TemporalUnit {
     /** TODO: неправильный дурэйшен
      * Високосный год
      */
-    LEAP_YEAR("leapYear", Duration.of(1, YEAR).plus(LEAP_OLYMPIC_WEEK.duration));
+    LEAP_YEAR("leapYear", Duration.of(12, MONTH).plus(LEAP_OLYMPIC_WEEK.duration));
 
     String name;
     Duration duration;

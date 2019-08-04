@@ -12,7 +12,7 @@ public enum DayOfBrumaire implements RepublicanDay {
     OIE,
     HELIOTROPE,
     FIGUE,
-    SCORSONÈRE,
+    SCORSONERE,
     ALISIER,
     CHARRUE,
     SALSIFIS,

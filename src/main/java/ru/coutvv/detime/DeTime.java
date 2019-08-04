@@ -6,6 +6,7 @@ import ru.coutvv.detime.temporal.DecimalChronoUnit;
 import java.time.LocalTime;
 import java.time.temporal.ChronoField;
 
+@Deprecated
 public class DeTime {
 
 	private final byte hour;

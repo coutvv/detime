@@ -40,4 +40,8 @@ public enum DayOfVentose implements RepublicanDay  {
     public String getName() {
         return this.name();
     }
+
+    public static void main(String[] args) {
+        DayOfVentose.ALATERNE.name();
+    }
 }
